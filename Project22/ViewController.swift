@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var distanceReading: UILabel!
+    @IBOutlet var uuidReading: UILabel!
     
     var locationManager: CLLocationManager!
     var beaconUUIDs = [UUID]()
@@ -48,7 +49,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //locationManager?.startRangingBeacons(satisfying: constraint)
     }
     
-    func update(distance: CLProximity) {
+    func update(distance: CLProximity, uuid: String) {
+        uuidReading.text = uuid
         UIView.animate(withDuration: 1) {
             switch distance {
               case .far:
@@ -69,7 +71,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         if let beacon = beacons.first {
-            update(distance: beacon.proximity)
+            update(distance: beacon.proximity, uuid: String(describing: beacon.uuid))
             
             if isNewUUID(beacon: beacon){
                 let ac = UIAlertController(title: "New beacon found", message: "uuid: \(beacon.uuid) Major.Minor: \(beacon.major),\(beacon.minor)", preferredStyle: .alert)
@@ -79,7 +81,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
             
         }else{
-            update(distance: .unknown)
+            update(distance: .unknown, uuid: "NA")
         }
     }
     

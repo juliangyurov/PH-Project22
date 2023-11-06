@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -22,21 +23,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UUID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS9-t1-95Q">
+                                <rect key="frame" x="176" y="543" width="41" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="R09-4J-c4q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4ut-4C-SXl"/>
+                            <constraint firstItem="VS9-t1-95Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C97-0M-0hy"/>
                             <constraint firstItem="R09-4J-c4q" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="QYu-ge-DGT"/>
+                            <constraint firstItem="VS9-t1-95Q" firstAttribute="top" secondItem="R09-4J-c4q" secondAttribute="bottom" constant="80.333333333333314" id="V3P-JV-qPd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="distanceReading" destination="R09-4J-c4q" id="oIb-wA-5H9"/>
+                        <outlet property="uuidReading" destination="VS9-t1-95Q" id="y1L-dR-FMV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100" y="-27"/>
+            <point key="canvasLocation" x="100" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
