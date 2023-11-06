@@ -11,6 +11,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var distanceReading: UILabel!
     
     var locationManager: CLLocationManager!
+    var beaconUUIDs = [UUID]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,9 +64,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         if let beacon = beacons.first {
             update(distance: beacon.proximity)
+            
+            if isNewUUID(beacon: beacon){
+                let ac = UIAlertController(title: "New beacon found", message: "uuid: \(beacon.uuid) Major.Minor: \(beacon.major),\(beacon.minor)", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+                present(ac, animated: true)
+                beaconUUIDs.append(beacon.uuid)
+            }
+            
         }else{
             update(distance: .unknown)
         }
+    }
+    
+    func isNewUUID(beacon: CLBeacon) -> Bool {
+        var isNew = true
+        for uuid in beaconUUIDs {
+            if String(describing: uuid) == String(describing: beacon.uuid) {
+                isNew = false
+            }
+        }
+        return isNew
     }
 }
 
