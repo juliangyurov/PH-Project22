@@ -17,15 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNKNOWN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R09-4J-c4q">
-                                <rect key="frame" x="100.66666666666669" y="414.66666666666669" width="192" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="M4K-Ya-H3y">
+                                <rect key="frame" x="68.666666666666686" y="79" width="256" height="256"/>
+                                <viewLayoutGuide key="safeArea" id="2pH-er-lHa"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="EBd-dH-slH"/>
+                                    <constraint firstAttribute="width" constant="256" id="QQS-MH-Bdc"/>
+                                    <constraint firstAttribute="width" secondItem="M4K-Ya-H3y" secondAttribute="height" multiplier="1:1" id="meX-Hj-iKt"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Bluetooth On/Off" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS9-t1-95Q">
+                                <rect key="frame" x="129" y="655" width="135" height="14.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UUID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS9-t1-95Q">
-                                <rect key="frame" x="176" y="543" width="41" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNKNOWN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R09-4J-c4q">
+                                <rect key="frame" x="100.66666666666669" y="577" width="192" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -33,25 +43,31 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="R09-4J-c4q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4ut-4C-SXl"/>
-                            <constraint firstItem="VS9-t1-95Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C97-0M-0hy"/>
-                            <constraint firstItem="R09-4J-c4q" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="QYu-ge-DGT"/>
-                            <constraint firstItem="VS9-t1-95Q" firstAttribute="top" secondItem="R09-4J-c4q" secondAttribute="bottom" constant="80.333333333333314" id="V3P-JV-qPd"/>
+                            <constraint firstItem="M4K-Ya-H3y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="0hP-KW-bSI"/>
+                            <constraint firstItem="VS9-t1-95Q" firstAttribute="top" secondItem="R09-4J-c4q" secondAttribute="bottom" constant="30" id="Q73-Iu-xFL"/>
+                            <constraint firstItem="M4K-Ya-H3y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UIQ-yn-hCs"/>
+                            <constraint firstItem="VS9-t1-95Q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bPK-nX-8pV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VS9-t1-95Q" secondAttribute="bottom" constant="148.66666666666663" id="hgm-wg-xZ9"/>
+                            <constraint firstItem="R09-4J-c4q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iD1-qO-h43"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="circleDistance" destination="M4K-Ya-H3y" id="bKG-rR-cDz"/>
                         <outlet property="distanceReading" destination="R09-4J-c4q" id="oIb-wA-5H9"/>
                         <outlet property="uuidReading" destination="VS9-t1-95Q" id="y1L-dR-FMV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="303" y="-13"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

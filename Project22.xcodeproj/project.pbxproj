@@ -13,6 +13,7 @@
 		35ADAB5F2AF807BA005A1D7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35ADAB5D2AF807BA005A1D7D /* Main.storyboard */; };
 		35ADAB612AF807BD005A1D7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35ADAB602AF807BD005A1D7D /* Assets.xcassets */; };
 		35ADAB642AF807BD005A1D7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35ADAB622AF807BD005A1D7D /* LaunchScreen.storyboard */; };
+		35B727A52AFD64FA00239B46 /* MyBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B727A42AFD64FA00239B46 /* MyBeacon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		35ADAB602AF807BD005A1D7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35ADAB632AF807BD005A1D7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35ADAB652AF807BD005A1D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35B727A42AFD64FA00239B46 /* MyBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBeacon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				35ADAB572AF807BA005A1D7D /* AppDelegate.swift */,
 				35ADAB592AF807BA005A1D7D /* SceneDelegate.swift */,
 				35ADAB5B2AF807BA005A1D7D /* ViewController.swift */,
+				35B727A42AFD64FA00239B46 /* MyBeacon.swift */,
 				35ADAB5D2AF807BA005A1D7D /* Main.storyboard */,
 				35ADAB602AF807BD005A1D7D /* Assets.xcassets */,
 				35ADAB622AF807BD005A1D7D /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				35ADAB5C2AF807BA005A1D7D /* ViewController.swift in Sources */,
 				35ADAB582AF807BA005A1D7D /* AppDelegate.swift in Sources */,
 				35ADAB5A2AF807BA005A1D7D /* SceneDelegate.swift in Sources */,
+				35B727A52AFD64FA00239B46 /* MyBeacon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
